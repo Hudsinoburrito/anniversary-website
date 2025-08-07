@@ -1,74 +1,122 @@
-
+/* Global styles */
 body {
-    margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: linear-gradient(to bottom, #ffe6f0, #fff);
-    overflow: hidden;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffeef2;
+  overflow-x: hidden;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 20px;
-    color: #ff8fa3;
+.site-title {
+  text-align: center;
+  font-size: 3em;
+  color: #e26a8d;
+  margin: 20px 0;
 }
 
-.timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100vw;
-    height: 300px;
-    padding: 50px;
-}
-
-.memory-card {
-    width: 100px;
-    height: 100px;
-    background-color: #fff0f5;
-    border: 2px solid #ff8fa3;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    background-size: cover;
-    background-position: center;
-}
-
-.memory-card:hover {
-    transform: scale(1.1);
+/* Timeline layout */
+.timeline-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .timeline-bar {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #ff8fa3;
-    z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 6px;
+  background-color: #f6b1c3;
+  border-radius: 3px;
+  z-index: 1;
 }
 
-.memory-card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+.memory-card {
+  position: absolute;
+  width: 140px;
+  height: 120px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  text-align: center;
+  padding: 5px;
 }
 
-.memory-card-container:nth-child(even) {
-    flex-direction: column-reverse;
+.memory-card:hover {
+  transform: scale(1.05);
 }
 
-.sprite {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-size: cover;
-    animation: float 5s infinite ease-in-out;
+.memory-card img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
+.memory-card span.date {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* Alternating card positions */
+.memory-card.top {
+  top: 15%;
+}
+
+.memory-card.bottom {
+  bottom: 15%;
+}
+
+/* Position each card manually */
+.memory-card:nth-child(3) { left: 5%; }
+.memory-card:nth-child(4) { left: 14%; }
+.memory-card:nth-child(5) { left: 23%; }
+.memory-card:nth-child(6) { left: 32%; }
+.memory-card:nth-child(7) { left: 41%; }
+.memory-card:nth-child(8) { left: 50%; }
+.memory-card:nth-child(9) { left: 59%; }
+.memory-card:nth-child(10) { left: 68%; }
+.memory-card:nth-child(11) { left: 77%; }
+.memory-card:nth-child(12) { left: 86%; }
+.memory-card:nth-child(13) { left: 95%; }
+.memory-card:nth-child(14) { left: 104%; }
+
+/* Heart Sprites */
+.heart-sprite {
+  position: absolute;
+  font-size: 1.5em;
+  opacity: 0.7;
+  animation: float 6s infinite ease-in-out;
+}
+
+.heart-sprite.one { top: 10%; left: 20%; animation-delay: 0s; }
+.heart-sprite.two { top: 60%; left: 80%; animation-delay: 1s; }
+.heart-sprite.three { top: 35%; left: 45%; animation-delay: 2s; }
+.heart-sprite.four { top: 70%; left: 10%; animation-delay: 3s; }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Transition overlay */
+#fade-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
