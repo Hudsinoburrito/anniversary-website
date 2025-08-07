@@ -4,20 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Memory 8</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/script.js"></script>
 </head>
-<body>
+<body style="background-color: #fff0f5;">
     <h1>Memory 8</h1>
-    <div class="button-container">
-        <button onclick="playMusic()">Play Music</button>
-        <button onclick="goBack()">Back to Timeline</button>
+    <button onclick="document.getElementById('music').play()">Play Music</button>
+    <button onclick="goBack()">Return to Timeline</button>
+    <audio id="music" src="../music/placeholder8.mp3"></audio>
+    <div class="collage">
+        <!-- Add images manually like memory8_1.jpg, memory8_2.jpg, etc. -->
+        <img src="../images/memory8_1.jpg" style="width: 30%; margin: 10px;">
+        <img src="../images/memory8_2.jpg" style="width: 30%; margin: 10px;">
+        <img src="../images/memory8_3.jpg" style="width: 30%; margin: 10px;">
     </div>
-    <audio id="bg-music" src="music/memory8.mp3" loop></audio>
-    <div class="memory-collage">
-        <img src="images/memory8_1.jpg" alt="Memory 8 photo 1">
-        <img src="images/memory8_2.jpg" alt="Memory 8 photo 2">
-        <img src="images/memory8_3.jpg" alt="Memory 8 photo 3">
-    </div>
+    <script>
+        function goBack() {
+            document.body.style.transition = "opacity 1s";
+            document.body.style.opacity = 0;
+            setTimeout(() => {
+                window.location.href = "../index.html";
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
