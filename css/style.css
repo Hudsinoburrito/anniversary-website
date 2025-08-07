@@ -77,10 +77,10 @@ body {
 
 /* Position each card manually */
 .memory-card:nth-child(3) { left: 5%; }
-.memory-card:nth-child(4) { left: 14%; }
-.memory-card:nth-child(5) { left: 23%; }
-.memory-card:nth-child(6) { left: 32%; }
-.memory-card:nth-child(7) { left: 41%; }
+.memory-card:nth-child(4) { left: 10%; }
+.memory-card:nth-child(5) { left: 15%; }
+.memory-card:nth-child(6) { left: 20%; }
+.memory-card:nth-child(7) { left: 25%; }
 .memory-card:nth-child(8) { left: 50%; }
 .memory-card:nth-child(9) { left: 59%; }
 .memory-card:nth-child(10) { left: 68%; }
