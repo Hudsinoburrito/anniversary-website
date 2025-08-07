@@ -1,32 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Memory 1</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script defer src="../js/script.js"></script>
+  <meta charset="UTF-8" />
+  <title>CAS Concert - Sept. 17</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body style="background-color: #fff0f5;">
-    <h1>Memory 1</h1>
-    <button onclick="document.getElementById('music').play()">Play Music</button>
-    <button onclick="goBack()">Return to Timeline</button>
-    <audio id="music" src="../music/placeholder1.mp3"></audio>
-    <div class="collage">
-        <!-- Add images manually like memory1_1.jpg, memory1_2.jpg, etc. -->
-        <img src="../images/memory1_1.jpg" style="width: 30%; margin: 10px;">
-        <img src="../images/memory1_2.jpg" style="width: 30%; margin: 10px;">
-        <img src="../images/memory1_3.jpg" style="width: 30%; margin: 10px;">
-    </div>
-    <script>
-        function goBack() {
-            document.body.style.transition = "opacity 1s";
-            document.body.style.opacity = 0;
-            setTimeout(() => {
-                window.location.href = "../index.html";
-            }, 1000);
-        }
-    </script>
-    <div id="fade-screen"></div>
+<body>
+  <h1>CAS Concert - Sept. 17</h1>
+  <div class="collage">
+    <img src="assets/memory1_1.jpg" />
+    <img src="assets/memory1_2.jpg" />
+    <img src="assets/memory1_3.jpg" />
+    <img src="assets/memory1_4.jpg" />
+  </div>
+  <button onclick="returnToTimeline()">Return to Timeline</button>
+  <audio id="bgm" src="assets/memory1.mp3" autoplay loop></audio>
+  <div id="fade-screen"></div>
+  <script src="js/script.js"></script>
 </body>
 </html>
