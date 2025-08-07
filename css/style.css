@@ -76,18 +76,18 @@ body {
 }
 
 /* Position each card manually */
-.memory-card:nth-child(3) { left: 5%; }
-.memory-card:nth-child(4) { left: 10%; }
-.memory-card:nth-child(5) { left: 15%; }
-.memory-card:nth-child(6) { left: 20%; }
-.memory-card:nth-child(7) { left: 25%; }
-.memory-card:nth-child(8) { left: 50%; }
-.memory-card:nth-child(9) { left: 59%; }
-.memory-card:nth-child(10) { left: 68%; }
-.memory-card:nth-child(11) { left: 77%; }
-.memory-card:nth-child(12) { left: 86%; }
-.memory-card:nth-child(13) { left: 95%; }
-.memory-card:nth-child(14) { left: 104%; }
+.memory-card:nth-child(3) { left: 10%; }
+.memory-card:nth-child(4) { left: 15%; }
+.memory-card:nth-child(5) { left: 20%; }
+.memory-card:nth-child(6) { left: 25%; }
+.memory-card:nth-child(7) { left: 30%; }
+.memory-card:nth-child(8) { left: 35%; }
+.memory-card:nth-child(9) { left: 65%; }
+.memory-card:nth-child(10) { left: 70%; }
+.memory-card:nth-child(11) { left: 75%; }
+.memory-card:nth-child(12) { left: 80%; }
+.memory-card:nth-child(13) { left: 85%; }
+.memory-card:nth-child(14) { left: 90%; }
 
 /* Heart Sprites */
 .heart-sprite {
