@@ -1,28 +1,23 @@
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CAS Concert - Sept. 17</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        
-        <h1>CAS Concert - Sept. 17</h1>
-        <div class="gallery">
-            <img src="images/memory1_1.jpg" alt="">
-<img src="images/memory1_2.jpg" alt="">
-<img src="images/memory1_3.jpg" alt="">
-        </div>
-        <div class="audio-player">
-            <audio controls autoplay>
-                <source src="music/memory1.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        
-        <a class="back-link" href="index.html">← Back to Timeline</a>
-    </body>
-    </html>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <h1>Memory 1</h1>
+    <div class="button-container">
+        <button onclick="playMusic()">Play Music</button>
+        <button onclick="goBack()">Back to Timeline</button>
+    </div>
+    <audio id="bg-music" src="music/memory1.mp3" loop></audio>
+    <div class="memory-collage">
+        <img src="images/memory1_1.jpg" alt="Memory 1 photo 1">
+        <img src="images/memory1_2.jpg" alt="Memory 1 photo 2">
+        <img src="images/memory1_3.jpg" alt="Memory 1 photo 3">
+    </div>
+</body>
+</html>
