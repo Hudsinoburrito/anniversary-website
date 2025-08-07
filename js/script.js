@@ -1,14 +1,23 @@
+function goToMemory(num) {
+  const fade = document.getElementById("fade-screen");
+  fade.style.opacity = "1";
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".memory-card");
-    cards.forEach(card => {
-        card.addEventListener("click", () => {
-            const target = card.getAttribute("data-target");
-            document.body.style.transition = "opacity 1s";
-            document.body.style.opacity = 0;
-            setTimeout(() => {
-                window.location.href = target;
-            }, 1000);
-        });
-    });
+  setTimeout(() => {
+    window.location.href = `memory${num}.html`;
+  }, 800);
+}
+
+function returnToTimeline() {
+  const fade = document.getElementById("fade-screen");
+  fade.style.opacity = "1";
+
+  setTimeout(() => {
+    window.location.href = `index.html`;
+  }, 800);
+}
+
+// Optional: fade in when arriving on a memory page
+window.addEventListener("load", () => {
+  const fade = document.getElementById("fade-screen");
+  if (fade) fade.style.opacity = "0";
 });
