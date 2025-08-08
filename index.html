@@ -2,84 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Memories</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <h1 class="site-title">Our Memories</h1>
-  <div class="timeline-container">
-    <div class="timeline-bar"></div>
-
-    <!-- Memory Cards -->
-    <div class="memory-card top" onclick="goToMemory(1)">
-      <img src="assets/memory1_1.jpg" alt="Memory 1" />
-      <span class="date">Sept. 17</span>
+  <h1 class="title">Our Memories</h1>
+  <div class="timeline">
+    <!-- Memory Card Example -->
+    <div class="timeline-item">
+      <div class="content left">
+        <img src="images/memory1_1.jpg" alt="Memory 1" class="preview-img"/>
+      </div>
+      <div class="content right">
+        <div class="date">09.17.24</div>
+      </div>
     </div>
 
-    <div class="memory-card bottom" onclick="goToMemory(2)">
-      <img src="assets/memory2_1.jpg" alt="Memory 2" />
-      <span class="date">Sept. 21</span>
+    <div class="timeline-item">
+      <div class="content left">
+        <div class="date">09.21.24</div>
+      </div>
+      <div class="content right">
+        <img src="images/memory2_1.jpg" alt="Memory 2" class="preview-img"/>
+      </div>
     </div>
 
-    <div class="memory-card top" onclick="goToMemory(3)">
-      <img src="assets/memory3_1.jpg" alt="Memory 3" />
-      <span class="date">Oct. 14</span>
-    </div>
-
-    <div class="memory-card bottom" onclick="goToMemory(4)">
-      <img src="assets/memory4_1.jpg" alt="Memory 4" />
-      <span class="date">Nov. 24</span>
-    </div>
-
-    <div class="memory-card top" onclick="goToMemory(5)">
-      <img src="assets/memory5_1.jpg" alt="Memory 5" />
-      <span class="date">Dec. 26</span>
-    </div>
-
-    <div class="memory-card bottom" onclick="goToMemory(6)">
-      <img src="assets/memory6_1.jpg" alt="Memory 6" />
-      <span class="date">Jan–May</span>
-    </div>
-
-    <div class="memory-card top" onclick="goToMemory(7)">
-      <img src="assets/memory7_1.jpg" alt="Memory 7" />
-      <span class="date">May 18</span>
-    </div>
-
-    <div class="memory-card bottom" onclick="goToMemory(8)">
-      <img src="assets/memory8_1.jpg" alt="Memory 8" />
-      <span class="date">May 31–Jun 1</span>
-    </div>
-
-    <div class="memory-card top" onclick="goToMemory(9)">
-      <img src="assets/memory9_1.jpg" alt="Memory 9" />
-      <span class="date">Jun. 21</span>
-    </div>
-
-    <div class="memory-card bottom" onclick="goToMemory(10)">
-      <img src="assets/memory10_1.jpg" alt="Memory 10" />
-      <span class="date">Jul. 17</span>
-    </div>
-
-    <div class="memory-card top" onclick="goToMemory(11)">
-      <img src="assets/memory11_1.jpg" alt="Memory 11" />
-      <span class="date">Aug. 4</span>
-    </div>
-
-    <div class="memory-card bottom" onclick="goToMemory(12)">
-      <img src="assets/memory12_1.jpg" alt="Memory 12" />
-      <span class="date">Aug. 18</span>
-    </div>
-
-    <!-- Decorative Floating Hearts -->
-    <div class="heart-sprite one">💖</div>
-    <div class="heart-sprite two">💘</div>
-    <div class="heart-sprite three">💕</div>
-    <div class="heart-sprite four">💗</div>
+    <!-- Add more items for all 12 memories using the same format -->
   </div>
 
-  <div id="fade-screen"></div>
+  <!-- Cute hearts and sprites -->
+  <div class="hearts-container">
+    <img src="sprites/heart1.png" class="sprite heart"/>
+    <img src="sprites/heart2.png" class="sprite heart"/>
+    <img src="sprites/sparkle.png" class="sprite sparkle"/>
+    <!-- Add more if you want -->
+  </div>
 
   <script src="js/script.js"></script>
 </body>
