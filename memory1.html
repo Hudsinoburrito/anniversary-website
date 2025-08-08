@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CAS Concert - Sept. 17</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory 1</title>
+  <link rel="stylesheet" href="css/memory.css" />
 </head>
 <body>
-  <h1>CAS Concert - Sept. 17</h1>
-  <div class="collage">
-    <img src="assets/memory1_1.jpg" />
-    <img src="assets/memory1_2.jpg" />
-    <img src="assets/memory1_3.jpg" />
-    <img src="assets/memory1_4.jpg" />
+  <div class="memory-page">
+    <button id="backButton">← Return to Timeline</button>
+    <button id="musicButton">🎵 Toggle Music</button>
+    <div class="collage">
+      <img src="images/memory1_1.jpg" />
+      <img src="images/memory1_2.jpg" />
+      <img src="images/memory1_3.jpg" />
+      <img src="images/memory1_4.jpg" />
+    </div>
+    <audio id="memoryMusic" src="audio/memory1.mp3" loop></audio>
   </div>
-  <button onclick="returnToTimeline()">Return to Timeline</button>
-  <audio id="bgm" src="assets/memory1.mp3" autoplay loop></audio>
-  <div id="fade-screen"></div>
-  <script src="js/script.js"></script>
+  <script src="js/memory.js"></script>
 </body>
 </html>
