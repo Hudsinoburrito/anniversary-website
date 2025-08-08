@@ -1,32 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Memory 12</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script defer src="../js/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory 12</title>
+  <link rel="stylesheet" href="css/memory.css" />
+  <style>
+    .message {
+      text-align: center;
+      font-size: 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 50px;
+      color: #d94e77;
+    }
+  </style>
 </head>
-<body style="background-color: #fff0f5;">
-    <h1>Memory 12</h1>
-    <button onclick="document.getElementById('music').play()">Play Music</button>
-    <button onclick="goBack()">Return to Timeline</button>
-    <audio id="music" src="../music/placeholder12.mp3"></audio>
-    <div class="collage">
-        <!-- Add images manually like memory12_1.jpg, memory12_2.jpg, etc. -->
-        <img src="../images/memory12_1.jpg" style="width: 30%; margin: 10px;">
-        <img src="../images/memory12_2.jpg" style="width: 30%; margin: 10px;">
-        <img src="../images/memory12_3.jpg" style="width: 30%; margin: 10px;">
+<body>
+  <div class="memory-page">
+    <button id="backButton">← Return to Timeline</button>
+    <button id="musicButton">🎵 Toggle Music</button>
+    <div class="message">
+      Our 3 Month Anniversary!!<br><br>
+      I like you so much and I’m so thankful for every moment we’ve shared together 💖 Thank you for putting up with my bs all the time<br><br>
+      Here’s to many more memories ahead 💫
     </div>
-    <script>
-        function goBack() {
-            document.body.style.transition = "opacity 1s";
-            document.body.style.opacity = 0;
-            setTimeout(() => {
-                window.location.href = "../index.html";
-            }, 1000);
-        }
-    </script>
-    <div id="fade-screen"></div>
+    <audio id="memoryMusic" src="audio/memory12.mp3" loop></audio>
+  </div>
+  <script src="js/memory.js"></script>
 </body>
 </html>
