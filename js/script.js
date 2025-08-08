@@ -1,8 +1,9 @@
-document.querySelectorAll('.timeline-item').forEach((item, index) => {
-  item.addEventListener('click', () => {
-    document.body.classList.add('fade-out');
-    setTimeout(() => {
-      window.location.href = `memory${index + 1}.html`;
-    }, 700);
-  });
-});
+// js/script.js
+
+function goToMemory(page) {
+  const overlay = document.querySelector('.fade-overlay');
+  overlay.style.opacity = '1';
+  setTimeout(() => {
+    window.location.href = page;
+  }, 1000);
+}
