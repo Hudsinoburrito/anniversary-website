@@ -2,42 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Memories</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <h1 class="title">Our Memories</h1>
-  <div class="timeline">
-    <!-- Memory Card Example -->
-    <div class="timeline-item">
-      <div class="content left">
-        <img src="images/memory1_1.jpg" alt="Memory 1" class="preview-img"/>
+  <div class="timeline-container">
+    <div class="timeline">
+      <!-- MEMORY CARDS: Add your previews and links -->
+      <div class="card top" onclick="goToMemory('memory1.html')">
+        <span class="date">Sept. 17</span>
+        <img src="images/memory1_1.jpg" alt="Memory 1 Preview" />
       </div>
-      <div class="content right">
-        <div class="date">09.17.24</div>
+      <div class="card bottom" onclick="goToMemory('memory2.html')">
+        <span class="date">Sept. 21</span>
+        <img src="images/memory2_1.jpg" alt="Memory 2 Preview" />
+      </div>
+      <div class="card top" onclick="goToMemory('memory3.html')">
+        <span class="date">Oct. 14</span>
+        <img src="images/memory3_1.jpg" alt="Memory 3 Preview" />
+      </div>
+      <div class="card bottom" onclick="goToMemory('memory4.html')">
+        <span class="date">Nov. 24</span>
+        <img src="images/memory4_1.jpg" alt="Memory 4 Preview" />
+      </div>
+      <div class="card top" onclick="goToMemory('memory5.html')">
+        <span class="date">Dec. 26</span>
+        <img src="images/memory5_1.jpg" alt="Memory 5 Preview" />
+      </div>
+      <div class="card bottom" onclick="goToMemory('memory6.html')">
+        <span class="date">Jan - May</span>
+        <img src="images/memory6_1.jpg" alt="Memory 6 Preview" />
+      </div>
+      <div class="card top" onclick="goToMemory('memory7.html')">
+        <span class="date">May 18</span>
+        <img src="images/memory7_1.jpg" alt="Memory 7 Preview" />
+      </div>
+      <div class="card bottom" onclick="goToMemory('memory8.html')">
+        <span class="date">May 31 - 32</span>
+        <img src="images/memory8_1.jpg" alt="Memory 8 Preview" />
+      </div>
+      <div class="card top" onclick="goToMemory('memory9.html')">
+        <span class="date">June 21</span>
+        <img src="images/memory9_1.jpg" alt="Memory 9 Preview" />
+      </div>
+      <div class="card bottom" onclick="goToMemory('memory10.html')">
+        <span class="date">July 17</span>
+        <img src="images/memory10_1.jpg" alt="Memory 10 Preview" />
+      </div>
+      <div class="card top" onclick="goToMemory('memory11.html')">
+        <span class="date">Aug. 4</span>
+        <img src="images/memory11_1.jpg" alt="Memory 11 Preview" />
+      </div>
+      <div class="card bottom" onclick="goToMemory('memory12.html')">
+        <span class="date">Aug. 18</span>
+        <img src="images/memory12_1.jpg" alt="Memory 12 Preview" />
       </div>
     </div>
-
-    <div class="timeline-item">
-      <div class="content left">
-        <div class="date">09.21.24</div>
-      </div>
-      <div class="content right">
-        <img src="images/memory2_1.jpg" alt="Memory 2" class="preview-img"/>
-      </div>
-    </div>
-
-    <!-- Add more items for all 12 memories using the same format -->
   </div>
 
-  <!-- Cute hearts and sprites -->
-  <div class="hearts-container">
-    <img src="sprites/heart1.png" class="sprite heart"/>
-    <img src="sprites/heart2.png" class="sprite heart"/>
-    <img src="sprites/sparkle.png" class="sprite sparkle"/>
-    <!-- Add more if you want -->
+  <div id="sprites">
+    <img src="images/heart1.png" class="sprite" />
+    <img src="images/heart2.png" class="sprite" />
+    <img src="images/star.png" class="sprite" />
   </div>
+
+  <div class="fade-overlay"></div>
 
   <script src="js/script.js"></script>
 </body>
