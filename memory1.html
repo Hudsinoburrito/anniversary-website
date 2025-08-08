@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Memory 1</title>
-  <link rel="stylesheet" href="css/memory.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-  <div class="memory-page">
-    <button id="backButton">← Return to Timeline</button>
-    <button id="musicButton">🎵 Toggle Music</button>
-    <div class="collage">
-      <img src="images/memory1_1.jpg" />
-      <img src="images/memory1_2.jpg" />
-      <img src="images/memory1_3.jpg" />
-      <img src="images/memory1_4.jpg" />
-    </div>
-    <audio id="memoryMusic" src="audio/memory1.mp3" loop></audio>
+<body class="memory-page">
+  <div class="memory-header">
+    <h1>CAS Concert (Sept 17)</h1>
+    <button class="back-button" onclick="goBack()">← Back</button>
   </div>
-  <script src="js/memory.js"></script>
+  <div class="collage">
+    <img src="images/memory1_1.jpg" />
+    <img src="images/memory1_2.jpg" />
+    <img src="images/memory1_3.jpg" />
+    <img src="images/memory1_4.jpg" />
+  </div>
+  <audio autoplay loop>
+    <source src="music/memory1.mp3" type="audio/mpeg" />
+  </audio>
+  <div class="fade-overlay"></div>
+  <script>
+    function goBack() {
+      document.querySelector('.fade-overlay').style.opacity = '1';
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
