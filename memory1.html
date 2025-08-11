@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Memory 1</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CAS Concert — Sept 17</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="memory-page">
   <div class="memory-header">
-    <h1>CAS Concert (Sept 17)</h1>
-    <button class="back-button" onclick="goBack()">← Back</button>
+    <h2 class="memory-title">CAS Concert — Sept 17</h2>
+    <div class="controls">
+      <button class="btn btn-play">▶ Play / Pause</button>
+      <button class="btn btn-return">← Return to Timeline</button>
+    </div>
   </div>
-  <div class="collage">
-    <img src="images/memory1_1.jpg" />
-    <img src="images/memory1_2.jpg" />
-    <img src="images/memory1_3.jpg" />
-    <img src="images/memory1_4.jpg" />
-  </div>
-  <audio autoplay loop>
-    <source src="music/memory1.mp3" type="audio/mpeg" />
-  </audio>
-  <div class="fade-overlay"></div>
-  <script>
-    function goBack() {
-      document.querySelector('.fade-overlay').style.opacity = '1';
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 1000);
-    }
-  </script>
+
+  <main class="masonry">
+    <div class="masonry-item"><img src="images/memory1_1.jpg" alt=""></div>
+    <div class="masonry-item"><img src="images/memory1_2.jpg" alt=""></div>
+    <div class="masonry-item"><img src="images/memory1_3.jpg" alt=""></div>
+    <div class="masonry-item"><img src="images/memory1_4.jpg" alt=""></div>
+    <div class="masonry-item"><img src="images/memory1_5.jpg" alt=""></div>
+  </main>
+
+  <audio class="memory-audio" src="music/memory1.mp3" preload="auto"></audio>
+
+  <div id="fade-overlay"></div>
+  <script src="js/script.js"></script>
 </body>
 </html>
