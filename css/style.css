@@ -1,218 +1,98 @@
-/* css/style.css - full replacement */
-
-/* Reset & base */
-* { box-sizing: border-box; }
-html,body { height: 100%; }
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, #fff5f8 0%, #ffeef3 100%);
-  color: #3b2a33;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffe6eb, #fff0f5);
   overflow-x: hidden;
 }
 
-/* Header title */
-header {
-  padding: 28px 16px 6px;
+.title {
   text-align: center;
-}
-.site-title, .main-title { display: none; } /* legacy */
-.site-title { margin: 0; }
-
-h1.site-title, .site-title { font-size: 2rem; color: #c44d73; }
-h1 { margin: 0; }
-
-/* Main visual area */
-.timeline-wrap {
-  width: 100%;
-  max-width: 1200px;
-  margin: 12px auto 48px;
-  padding: 10px 16px;
-  position: relative;
+  font-size: 2em;
+  color: #b30059;
+  margin-top: 30px;
 }
 
-/* central title at the very top */
-.site-title { display: block; text-align: center; font-size: 2.8rem; color: #d24f78; margin-top: 10px; }
-
-/* timeline line */
-.timeline-line {
-  position: absolute;
-  left: 2%;
-  right: 2%;
-  top: 55%;
-  height: 6px;
-  background: linear-gradient(90deg,#f4a6bf,#e787ab);
-  border-radius: 4px;
-  z-index: 1;
-  box-shadow: 0 6px 18px rgba(198,112,140,0.08);
-}
-
-/* timeline items container: evenly distribute across full width */
 .timeline {
-  display: flex;
-  justify-content: space-between; /* spreads 12 items across available width */
-  align-items: center;
   position: relative;
-  gap: 12px;
-  padding: 48px 2%;
-  z-index: 2;
-}
-
-/* single timeline card */
-.timeline-item {
-  width: calc((100% - 2%*2 - 11*12px) / 12); /* just rely on flex: each gets a share; fallback */
-  max-width: 120px;
-  min-width: 86px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  user-select: none;
-  transition: transform 260ms ease, filter 260ms ease;
-}
-.timeline-item:hover { transform: translateY(-6px) scale(1.03); filter: drop-shadow(0 6px 18px rgba(0,0,0,0.12)); }
-
-/* preview thumbnail */
-.preview img {
-  width: 100%;
-  height: 86px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid #ffffff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* date label */
-.label {
-  margin-top: 8px;
-  font-weight: 700;
-  color: #7a2b47;
-  font-size: 0.92rem;
-}
-
-/* alternate top / bottom positioning */
-.timeline-item.top { transform-origin: center top; margin-top: -86px; }    /* visually above the line */
-.timeline-item.bottom { transform-origin: center bottom; margin-top: 86px; } /* visually below */
-
-/* small connector dot between preview and the timeline line */
-.timeline-item::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border-radius: 50%;
-  border: 3px solid #e67aa0;
-  top: calc(50% - 5px);
-  z-index: 3;
-}
-
-/* sprites layer */
-#sprite-layer { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-.sprite {
-  position: absolute;
-  width: 34px;
-  height: 34px;
-  opacity: 0.85;
-  transform-origin: center;
-  animation: floaty 6s ease-in-out infinite;
-}
-@keyframes floaty {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-22px) rotate(12deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
-
-/* fade overlay used for transitions */
-#fade-overlay {
-  position: fixed;
-  inset: 0;
-  background: white;
-  z-index: 9999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.9s ease;
-}
-
-/* memory pages common styling (masonry) */
-.memory-page {
-  padding: 28px;
-  background: linear-gradient(180deg,#fff6f9,#fff);
-  min-height: 100vh;
-}
-.memory-header {
-  display:flex;
   justify-content: space-between;
-  align-items:center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-.memory-title {
-  font-size: 1.6rem;
-  color: #b63f64;
-  margin: 0;
-}
-.controls { display:flex; gap:8px; align-items:center; }
-.btn {
-  background: #ffd7e6;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #6b2540;
-  font-weight: 700;
-  box-shadow: 0 6px 14px rgba(198,112,140,0.08);
+  align-items: center;
+  width: 95%;
+  margin: 100px auto;
+  border-top: 4px solid #e75480;
+  padding-top: 100px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-/* Masonry-style layout using CSS columns */
-.masonry {
-  column-count: 3;
-  column-gap: 12px;
-  width: min(1100px, 92%);
-  margin: 0 auto;
-}
-@media (max-width: 1000px) { .masonry { column-count: 2; } }
-@media (max-width: 600px) { .masonry { column-count: 1; } }
-
-.masonry-item {
-  display: inline-block;
-  width: 100%;
-  margin: 0 0 12px;
-  break-inside: avoid;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+.timeline::-webkit-scrollbar {
+  display: none;
 }
 
-.masonry-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* small final message styling */
-.final-message {
-  max-width: 760px;
-  margin: 48px auto;
+.memory-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 120px;
   text-align: center;
-  color: #a94264;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* utility: center content */
-.center { display:flex; justify-content:center; align-items:center; }
+.memory-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
 
-/* subtle focus outline */
-.timeline-item:focus { outline: 3px solid rgba(198,112,140,0.25); }
+.memory-card:hover {
+  transform: scale(1.1);
+}
 
-/* ensure the timeline stays on-screen on small widths */
-@media (max-width: 1100px) {
-  .timeline { gap: 8px; padding: 48px 6px; }
-  .timeline-item { min-width: 94px; max-width: 110px; }
+.date {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #b30059;
+}
+
+/* Floating Hearts */
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.floating-hearts::before,
+.floating-hearts::after {
+  content: "❤";
+  position: absolute;
+  font-size: 24px;
+  color: rgba(255, 105, 180, 0.7);
+  animation: float 6s linear infinite;
+}
+
+.floating-hearts::after {
+  left: 50%;
+  font-size: 32px;
+  color: rgba(255, 20, 147, 0.6);
+  animation-duration: 8s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
 }
