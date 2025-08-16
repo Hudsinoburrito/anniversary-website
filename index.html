@@ -1,89 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Memories</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1 class="site-title">Our Memories</h1>
-  </header>
-
-  <main class="timeline-wrap">
-    <div class="timeline-line" aria-hidden="true"></div>
-
-    <div class="timeline" id="timeline">
-      <!-- 12 timeline items. Each has a preview image and a date (alternating top/bottom handled by CSS) -->
-      <!-- Make sure preview images exist at images/memoryX_preview.jpg -->
-      <div class="timeline-item top" data-target="memory1.html">
-        <div class="preview"><img src="images/memory1_preview.jpg" alt="CAS Concert preview"></div>
-        <div class="label">Sept. 17</div>
-      </div>
-
-      <div class="timeline-item bottom" data-target="memory2.html">
-        <div class="label">Sept. 21</div>
-        <div class="preview"><img src="images/memory2_preview.jpg" alt="Homecoming preview"></div>
-      </div>
-
-      <div class="timeline-item top" data-target="memory3.html">
-        <div class="preview"><img src="images/memory3_preview.jpg" alt="Canyon Lake preview"></div>
-        <div class="label">Oct. 14</div>
-      </div>
-
-      <div class="timeline-item bottom" data-target="memory4.html">
-        <div class="label">Nov. 24</div>
-        <div class="preview"><img src="images/memory4_preview.jpg" alt="Austin day preview"></div>
-      </div>
-
-      <div class="timeline-item top" data-target="memory5.html">
-        <div class="preview"><img src="images/memory5_preview.jpg" alt="Ice Skating preview"></div>
-        <div class="label">Dec. 26</div>
-      </div>
-
-      <div class="timeline-item bottom" data-target="memory6.html">
-        <div class="label">Jan–May</div>
-        <div class="preview"><img src="images/memory6_preview.jpg" alt="Facetimes preview"></div>
-      </div>
-
-      <div class="timeline-item top" data-target="memory7.html">
-        <div class="preview"><img src="images/memory7_preview.jpg" alt="We started dating preview"></div>
-        <div class="label">May 18</div>
-      </div>
-
-      <div class="timeline-item bottom" data-target="memory8.html">
-        <div class="label">May 31–Jun 1</div>
-        <div class="preview"><img src="images/memory8_preview.jpg" alt="Family beach preview"></div>
-      </div>
-
-      <div class="timeline-item top" data-target="memory9.html">
-        <div class="preview"><img src="images/memory9_preview.jpg" alt="1 month anniversary preview"></div>
-        <div class="label">Jun. 21</div>
-      </div>
-
-      <div class="timeline-item bottom" data-target="memory10.html">
-        <div class="label">Jul. 17</div>
-        <div class="preview"><img src="images/memory10_preview.jpg" alt="Birthday trip preview"></div>
-      </div>
-
-      <div class="timeline-item top" data-target="memory11.html">
-        <div class="preview"><img src="images/memory11_preview.jpg" alt="Beach trip preview"></div>
-        <div class="label">Aug. 4</div>
-      </div>
-
-      <div class="timeline-item bottom" data-target="memory12.html">
-        <div class="label">Aug. 18</div>
-        <div class="preview"><img src="images/memory12_preview.jpg" alt="3 month anniversary preview"></div>
-      </div>
+  <h1 class="title">Our Memories</h1>
+  <div class="timeline">
+    <div class="memory-card" data-link="memory1.html">
+      <img src="images/memory1_1.jpg" alt="CAS Concert preview">
+      <p class="date">Sept. 17</p>
     </div>
-  </main>
+    <div class="memory-card" data-link="memory2.html">
+      <img src="images/memory2_1.jpg" alt="Homecoming preview">
+      <p class="date">Sept. 21</p>
+    </div>
+    <div class="memory-card" data-link="memory3.html">
+      <img src="images/memory3_1.jpg" alt="Canyon Lake preview">
+      <p class="date">Oct. 14</p>
+    </div>
+    <div class="memory-card" data-link="memory4.html">
+      <img src="images/memory4_1.jpg" alt="Austin Day preview">
+      <p class="date">Nov. 24</p>
+    </div>
+    <div class="memory-card" data-link="memory5.html">
+      <img src="images/memory5_1.jpg" alt="Ice Skating preview">
+      <p class="date">Dec. 26</p>
+    </div>
+    <div class="memory-card" data-link="memory6.html">
+      <img src="images/memory6_1.jpg" alt="We started dating preview">
+      <p class="date">Jan–May</p>
+    </div>
+    <div class="memory-card" data-link="memory7.html">
+      <img src="images/memory7_1.jpg" alt="Facetimes preview">
+      <p class="date">May 18</p>
+    </div>
+    <div class="memory-card" data-link="memory8.html">
+      <img src="images/memory8_1.jpg" alt="1 month anniversary preview">
+      <p class="date">Jun. 21</p>
+    </div>
+    <div class="memory-card" data-link="memory9.html">
+      <img src="images/memory9_1.jpg" alt="Family beach preview">
+      <p class="date">May 31–Jun 1</p>
+    </div>
+    <div class="memory-card" data-link="memory10.html">
+      <img src="images/memory10_1.jpg" alt="Birthday trip preview">
+      <p class="date">Jul. 17</p>
+    </div>
+    <div class="memory-card" data-link="memory11.html">
+      <img src="images/memory11_1.jpg" alt="Beach trip preview">
+      <p class="date">Aug. 4</p>
+    </div>
+    <div class="memory-card" data-link="memory12.html">
+      <img src="images/memory12_1.jpg" alt="3 month anniversary preview">
+      <p class="date">Aug. 18</p>
+    </div>
+  </div>
 
-  <!-- floating decorative sprites (use your own small pngs) -->
-  <div id="sprite-layer" aria-hidden="true"></div>
-
-  <!-- full-page white overlay used for fade transitions -->
-  <div id="fade-overlay" aria-hidden="true"></div>
+  <!-- Floating Hearts -->
+  <div class="floating-hearts"></div>
 
   <script src="js/script.js"></script>
 </body>
