@@ -1,98 +1,63 @@
+/* css/style.css */
+
+* { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #ffe6eb, #fff0f5);
-  overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #fff5f8, #ffeef3);
+  color: #3b2a33;
 }
 
-.title {
+header {
+  padding: 20px;
   text-align: center;
-  font-size: 2em;
-  color: #b30059;
-  margin-top: 30px;
+}
+.site-title {
+  font-size: 2.5rem;
+  color: #d24f78;
 }
 
+/* timeline */
+.timeline-wrap { max-width: 1200px; margin: 0 auto; position: relative; }
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  right: 2%;
+  height: 6px;
+  background: linear-gradient(90deg,#f4a6bf,#e787ab);
+  border-radius: 4px;
+  transform: translateY(-50%);
+}
 .timeline {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  margin: 100px auto;
-  border-top: 4px solid #e75480;
-  padding-top: 100px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
+  padding: 80px 2%;
 }
-
-.timeline::-webkit-scrollbar {
-  display: none;
-}
-
-.memory-card {
-  position: relative;
-  flex: 0 0 auto;
-  width: 120px;
+.timeline-item {
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.memory-card img {
   width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
-.memory-card:hover {
-  transform: scale(1.1);
-}
-
-.date {
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 0.9em;
-  color: #b30059;
-}
-
-/* Floating Hearts */
-.floating-hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
+.preview img {
   width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: -1;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.label {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #7a2b47;
 }
 
-.floating-hearts::before,
-.floating-hearts::after {
-  content: "❤";
-  position: absolute;
-  font-size: 24px;
-  color: rgba(255, 105, 180, 0.7);
-  animation: float 6s linear infinite;
-}
-
-.floating-hearts::after {
-  left: 50%;
-  font-size: 32px;
-  color: rgba(255, 20, 147, 0.6);
-  animation-duration: 8s;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(100vh) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh) scale(1.5);
-    opacity: 0;
-  }
-}
+/* memory pages */
+.memory-page { padding: 20px; min-height: 100vh; }
+.memory-header { display: flex; justify-content: space-between; align-items: center; }
+.memory-title { font-size: 1.5rem; color: #b63f64; }
+.btn { padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; background: #ffd7e6; }
+.masonry { column-count: 3; column-gap: 12px; }
+.masonry-item { margin-bottom: 12px; break-inside: avoid; }
+.masonry-item img { width: 100%; display: block; border-radius: 10px; }
