@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Beach trip — Aug 4</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory 11</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="memory-page">
   <div class="memory-header">
-    <h2 class="memory-title">Beach Trip — Aug 4</h2>
+    <h2 class="memory-title">Memory 11</h2>
     <div class="controls">
-      <button class="btn btn-play">▶ Play / Pause</button>
-      <button class="btn btn-return">← Return to Timeline</button>
+      <button class="btn" onclick="goHome()">Back</button>
+      <button class="btn" onclick="toggleMusic()">🎵</button>
     </div>
   </div>
+  <div class="masonry">
+    <!-- Replace with actual memory 11 images -->
+    <div class="masonry-item"><img src="images/memory11_1.jpg" alt="Memory 11"></div>
+    <div class="masonry-item"><img src="images/memory11_2.jpg" alt="Memory 11"></div>
+    <div class="masonry-item"><img src="images/memory11_3.jpg" alt="Memory 11"></div>
+  </div>
 
-  <main class="masonry">
-    <div class="masonry-item"><img src="images/memory11_1.jpg" alt=""></div>
-    <div class="masonry-item"><img src="images/memory11_2.jpg" alt=""></div>
-    <div class="masonry-item"><img src="images/memory11_3.jpg" alt=""></div>
-  </main>
+  <audio id="bg-music" loop>
+    <source src="music/memory11.mp3" type="audio/mp3">
+  </audio>
 
-  <audio class="memory-audio" src="music/memory11.mp3" preload="auto"></audio>
-
-  <div id="fade-overlay"></div>
   <script src="js/script.js"></script>
 </body>
 </html>

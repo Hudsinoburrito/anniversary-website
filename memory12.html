@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Our 3 Month Anniversary</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory 12</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="memory-page">
   <div class="memory-header">
-    <h2 class="memory-title">Our 3 Month Anniversary!!</h2>
+    <h2 class="memory-title">Memory 12</h2>
     <div class="controls">
-      <button class="btn btn-play">▶ Play / Pause</button>
-      <button class="btn btn-return">← Return to Timeline</button>
+      <button class="btn" onclick="goHome()">Back</button>
+      <button class="btn" onclick="toggleMusic()">🎵</button>
     </div>
   </div>
-
-  <div class="final-message">
-    <p>
-      I like you so much and I’m so thankful for every moment we’ve shared together 💖 Thank you for putting up with my bs all the time<br><br>
-      Here’s to many more memories ahead 💫
-    </p>
+  <div class="masonry">
+    <!-- Replace with actual memory 12 images -->
+    <div class="masonry-item"><img src="images/memory12_1.jpg" alt="Memory 12"></div>
+    <div class="masonry-item"><img src="images/memory12_2.jpg" alt="Memory 12"></div>
+    <div class="masonry-item"><img src="images/memory12_3.jpg" alt="Memory 12"></div>
   </div>
 
-  <audio class="memory-audio" src="music/memory12.mp3" preload="auto"></audio>
+  <audio id="bg-music" loop>
+    <source src="music/memory12.mp3" type="audio/mp3">
+  </audio>
 
-  <div id="fade-overlay"></div>
   <script src="js/script.js"></script>
 </body>
 </html>

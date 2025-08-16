@@ -7,60 +7,65 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1 class="title">Our Memories</h1>
-  <div class="timeline">
-    <div class="memory-card" data-link="memory1.html">
-      <img src="images/memory1_1.jpg" alt="CAS Concert preview">
-      <p class="date">Sept. 17</p>
+  <header>
+    <h1 class="site-title">Our Memories</h1>
+  </header>
+  <main class="timeline-wrap">
+    <div class="timeline-line"></div>
+    <div class="timeline">
+      <div class="timeline-item top" onclick="openMemory(1)">
+        <div class="preview"><img src="images/memory1_1.jpg" alt="Preview"></div>
+        <div class="label">Sept 17</div>
+      </div>
+      <div class="timeline-item bottom" onclick="openMemory(2)">
+        <div class="preview"><img src="images/memory2_1.jpg" alt="Preview"></div>
+        <div class="label">Sept 21</div>
+      </div>
+      <div class="timeline-item top" onclick="openMemory(3)">
+        <div class="preview"><img src="images/memory3_1.jpg" alt="Preview"></div>
+        <div class="label">Oct 14</div>
+      </div>
+      <div class="timeline-item bottom" onclick="openMemory(4)">
+        <div class="preview"><img src="images/memory4_1.jpg" alt="Preview"></div>
+        <div class="label">Oct 28</div>
+      </div>
+      <div class="timeline-item top" onclick="openMemory(5)">
+        <div class="preview"><img src="images/memory5_1.jpg" alt="Preview"></div>
+        <div class="label">Nov 11</div>
+      </div>
+      <div class="timeline-item bottom" onclick="openMemory(6)">
+        <div class="preview"><img src="images/memory6_1.jpg" alt="Preview"></div>
+        <div class="label">Dec 2</div>
+      </div>
+      <div class="timeline-item top" onclick="openMemory(7)">
+        <div class="preview"><img src="images/memory7_1.jpg" alt="Preview"></div>
+        <div class="label">Dec 25</div>
+      </div>
+      <div class="timeline-item bottom" onclick="openMemory(8)">
+        <div class="preview"><img src="images/memory8_1.jpg" alt="Preview"></div>
+        <div class="label">Jan 15</div>
+      </div>
+      <div class="timeline-item top" onclick="openMemory(9)">
+        <div class="preview"><img src="images/memory9_1.jpg" alt="Preview"></div>
+        <div class="label">Feb 14</div>
+      </div>
+      <div class="timeline-item bottom" onclick="openMemory(10)">
+        <div class="preview"><img src="images/memory10_1.jpg" alt="Preview"></div>
+        <div class="label">Mar 10</div>
+      </div>
+      <div class="timeline-item top" onclick="openMemory(11)">
+        <div class="preview"><img src="images/memory11_1.jpg" alt="Preview"></div>
+        <div class="label">Jul 20</div>
+      </div>
+      <div class="timeline-item bottom" onclick="openMemory(12)">
+        <div class="preview"><img src="images/memory12_1.jpg" alt="Preview"></div>
+        <div class="label">Aug 4</div>
+      </div>
     </div>
-    <div class="memory-card" data-link="memory2.html">
-      <img src="images/memory2_1.jpg" alt="Homecoming preview">
-      <p class="date">Sept. 21</p>
-    </div>
-    <div class="memory-card" data-link="memory3.html">
-      <img src="images/memory3_1.jpg" alt="Canyon Lake preview">
-      <p class="date">Oct. 14</p>
-    </div>
-    <div class="memory-card" data-link="memory4.html">
-      <img src="images/memory4_1.jpg" alt="Austin Day preview">
-      <p class="date">Nov. 24</p>
-    </div>
-    <div class="memory-card" data-link="memory5.html">
-      <img src="images/memory5_1.jpg" alt="Ice Skating preview">
-      <p class="date">Dec. 26</p>
-    </div>
-    <div class="memory-card" data-link="memory6.html">
-      <img src="images/memory6_1.jpg" alt="We started dating preview">
-      <p class="date">Jan–May</p>
-    </div>
-    <div class="memory-card" data-link="memory7.html">
-      <img src="images/memory7_1.jpg" alt="Facetimes preview">
-      <p class="date">May 18</p>
-    </div>
-    <div class="memory-card" data-link="memory8.html">
-      <img src="images/memory8_1.jpg" alt="1 month anniversary preview">
-      <p class="date">Jun. 21</p>
-    </div>
-    <div class="memory-card" data-link="memory9.html">
-      <img src="images/memory9_1.jpg" alt="Family beach preview">
-      <p class="date">May 31–Jun 1</p>
-    </div>
-    <div class="memory-card" data-link="memory10.html">
-      <img src="images/memory10_1.jpg" alt="Birthday trip preview">
-      <p class="date">Jul. 17</p>
-    </div>
-    <div class="memory-card" data-link="memory11.html">
-      <img src="images/memory11_1.jpg" alt="Beach trip preview">
-      <p class="date">Aug. 4</p>
-    </div>
-    <div class="memory-card" data-link="memory12.html">
-      <img src="images/memory12_1.jpg" alt="3 month anniversary preview">
-      <p class="date">Aug. 18</p>
-    </div>
-  </div>
+  </main>
 
-  <!-- Floating Hearts -->
-  <div class="floating-hearts"></div>
+  <div id="sprite-layer"></div>
+  <div id="fade-overlay"></div>
 
   <script src="js/script.js"></script>
 </body>
